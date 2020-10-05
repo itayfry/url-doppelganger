@@ -22,7 +22,7 @@ const openNewTab = (buttonConfig) => {
         for(const [key, val] of Object.entries(buttonConfig.params)){
             url.searchParams.append(key, val)
         }
-        chrome.tabs.create({ url });
+        chrome.tabs.create({ url: url.toString() });
     });
 }
 
