@@ -16,7 +16,7 @@ const buttonsConfig = [
 
 for (let i = 0; i < buttons.length, i < buttonsConfig.length; i++){
     buttons[i].onClick = openNewTab(buttonsConfig[i]);
-})
+}
 const openNewTab = (buttonConfig) => {
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         let url = new URL(tabs[0].url);
