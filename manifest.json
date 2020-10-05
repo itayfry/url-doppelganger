@@ -1,0 +1,9 @@
+{
+  "name": "Url Doppelganger",
+  "version": "1.0",
+  "description": "Chrome extension to open a similar page (usually different env) in a new tab",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs"
+  ]
+}
