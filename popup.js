@@ -23,7 +23,7 @@ const openNewTab = (buttonConfig) => {
         url.protocol = buttonConfig.protocol + ':';
         for(const [key, val] of Object.entries(buttonConfig.params)){
             url.searchParams.append(key, val)
-        })
+        }
         chrome.tabs.create({ url });
     });
 }
