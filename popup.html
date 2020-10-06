@@ -9,11 +9,48 @@
         margin: 10px;
       }
     </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <button class="urlChanger" id="btn1">Local</button>
     <button class="urlChanger" id="btn2">Production</button>
     <button class="urlChanger" id="btn3">Testing</button>
+    <br>
+    <br>
+    <div class="settingsContainer">
+
+      <input type="checkbox" id="edit">
+      <label for="edit">Edit</label>
+      <br><br>
+      <h4 class="editSettings">Local Settings:</h4>
+      <br>
+      <label class="editSettings" for="label">Label:</label>
+      <input class="editSettings labels" type="text" id="label" name="label">
+      <label class="editSettings" for="protocol">Protocol:</label>
+      <input class="editSettings protocols" type="text" id="protocol" name="protocol">
+      <label class="editSettings" for="params">Params:</label>
+      <input class="editSettings params" type="text" id="params" name="params">
+      <br><br>
+      <h4 class="editSettings">Production Settings:</h4>
+      <br>
+      <label class="editSettings" for="label">Label:</label>
+      <input class="editSettings labels" type="text" id="label" name="label">
+      <label class="editSettings" for="protocol">Protocol:</label>
+      <input class="editSettings protocols" type="text" id="protocol" name="protocol">
+      <label class="editSettings" for="params">Params:</label>
+      <input class="editSettings params" type="text" id="params" name="params">
+      <br><br>
+      <h4 class="editSettings">Testing Settings:</h4>
+      <br>
+      <label class="editSettings" for="label">Label:</label>
+      <input class="editSettings labels" type="text" id="label" name="label">
+      <label class="editSettings" for="protocol">Protocol:</label>
+      <input class="editSettings protocols" type="text" id="protocol" name="protocol">
+      <label class="editSettings" for="params">Params:</label>
+      <input class="editSettings params" type="text" id="params" name="params">
+      <br><br>
+      <input id="submit" class="editSettings" type="submit" name="Save" value="Save">
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>

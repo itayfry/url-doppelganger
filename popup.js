@@ -15,6 +15,56 @@ let buttonsConfig = [
         params: { env: 'qa' }
     }
 ]
+
+
+document.getElementById('edit').addEventListener("change", function(){
+
+  if(document.getElementById('edit').checked){
+    var elems = document.getElementsByClassName('editSettings');
+    for(var i = 0; i < elems.length; i++){
+      elems[i].style.display = "inline";
+    }
+  }
+  else{
+    var elems = document.getElementsByClassName('editSettings');
+    for(var i = 0; i < elems.length; i++){
+      elems[i].style.display = "none";
+    }
+  }
+})
+
+document.getElementById('submit').addEventListener('click', function(){
+  var labels = document.getElementsByClassName('labels');
+  var protocols = document.getElementsByClassName('protocols');
+  var params = document.getElementsByClassName('params');
+
+  for(var i = 0; i < labels.length; i++){
+    if(labels[i].value != ""){
+      buttonsConfig[i].label = labels[i].value;
+    }
+    if(protocols[i].value != ""){
+      buttonsConfig[i].protocol = protocols[i].value;
+    }
+    if(params[i].value != ""){
+      buttonsConfig[i].params = params[i].value;
+    }
+  }
+  console.log(buttonsConfig[0].params);
+  console.log(buttonsConfig[1].params);
+  console.log(buttonsConfig[2].params);
+
+  var elems = document.getElementsByClassName('editSettings');
+  for(var i = 0; i < elems.length; i++){
+    elems[i].style.display = "none";
+  }
+  document.getElementById('edit').checked = false;
+  alert("Save Succuessfully!")
+})
+
+
+
+
+
 const buttonsConfigUrl = chrome.runtime.getURL('buttonsConfig.json');
 fetch(buttonsConfigUrl)
     .then((response) => response.json())
