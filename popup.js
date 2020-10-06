@@ -1,5 +1,4 @@
-const buttons = document.getElementsByClassName('urlChanger')
-const buttonsConfig = [
+let buttonsConfig = [
     {
         protocol: 'http',
         params: { a: 'true' }
@@ -13,7 +12,12 @@ const buttonsConfig = [
         params: { c: 'false' }
     }
 ]
+const buttonsConfigUrl = chrome.runtime.getURL('buttonsConfig.json');
+fetch(buttonsConfigUrl)
+    .then((response) => response.json())
+    .then((json) => { buttonsConfig = json.buttonsConfig });
 
+const buttons = document.getElementsByClassName('urlChanger')
 
 const openNewTab = (buttonConfig) => {
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
