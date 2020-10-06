@@ -1,15 +1,18 @@
 let buttonsConfig = [
     {
-        protocol: 'http',
-        params: { a: 'true' }
+        label: "Local",
+        protocol: "http",
+        params: { "env": "local" }
     },
     {
-        protocol: 'https',
-        params: { b: '2' }
+        label: "Production",
+        protocol: "https",
+        params: { env: "production" }
     },
     {
+        label: "Testing",
         protocol: 'https',
-        params: { c: 'false' }
+        params: { env: 'qa' }
     }
 ]
 const buttonsConfigUrl = chrome.runtime.getURL('buttonsConfig.json');
