@@ -27,5 +27,5 @@ const openNewTab = (buttonConfig) => {
 }
 
 for (let i = 0; i < buttons.length, i < buttonsConfig.length; i++){
-    buttons[i].onClick = openNewTab(buttonsConfig[i]);
+    buttons[i].addEventListener('click', () => openNewTab(buttonsConfig[i]));
 }
