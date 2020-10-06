@@ -9,11 +9,47 @@
         margin: 10px;
       }
     </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <button class="urlChanger" id="btn1">Local</button>
     <button class="urlChanger" id="btn2">Production</button>
     <button class="urlChanger" id="btn3">Testing</button>
+    <br>
+    <br>
+    <input type="checkbox" id="edit">
+    <label for="edit">Edit</label>
+    <div class="settingsContainer">
+      <br><br>
+      <h4>Local Settings:</h4>
+      <br>
+      <label  for="label">Label:</label>
+      <input class="labels" type="text" id="label" name="label">
+      <label for="protocol">Protocol:</label>
+      <input class="protocols" type="text" id="protocol" name="protocol">
+      <label for="params">Params:</label>
+      <input class="params" type="text" id="params" name="params">
+      <br><br>
+      <h4>Production Settings:</h4>
+      <br>
+      <label for="label">Label:</label>
+      <input class="labels" type="text" id="label" name="label">
+      <label for="protocol">Protocol:</label>
+      <input class="protocols" type="text" id="protocol" name="protocol">
+      <label for="params">Params:</label>
+      <input class="params" type="text" id="params" name="params">
+      <br><br>
+      <h4>Testing Settings:</h4>
+      <br>
+      <label for="label">Label:</label>
+      <input class="labels" type="text" id="label" name="label">
+      <label for="protocol">Protocol:</label>
+      <input class="protocols" type="text" id="protocol" name="protocol">
+      <label for="params">Params:</label>
+      <input class="params" type="text" id="params" name="params">
+      <br><br>
+      <input id="submit" type="submit" name="Save" value="Save">
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
